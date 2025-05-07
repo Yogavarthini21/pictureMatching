@@ -1,0 +1,45 @@
+   .game-over-alert {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.8);
+      background: #ffffff;
+      color: #333;
+      padding: 30px 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      z-index: 999;
+      font-size: 1.5rem;
+      text-align: center;
+      display: none;
+      animation: popupIn 0.5s ease forwards;
+    }
+
+    @keyframes popupIn {
+      0% {
+        transform: translate(-50%, -50%) scale(0.6);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+    }
+
+    .game-over-alert.show {
+      display: block;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #999;
+    }
+
+    .close-btn:hover {
+      color: #f55;
+    }
